@@ -1,0 +1,398 @@
+body{
+  background-color: black;
+}
+
+/* Navbar styling */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  border-bottom: 3px solid #eb4301;
+  background-color: black;
+  font-size: 24px; /* Increased font size for all navbar text */
+}
+
+.navbar-left {
+  display: flex;
+  align-items: center;
+}
+
+/* Logo styling: Circular with increased size */
+.navbar-logo {
+  width: 100px; /* Increased size */
+  height: 100px;
+  border-radius: 50%; /* Circular shape */
+  margin-right: 15px;
+  cursor: pointer;
+  padding: 5px; /* Adjust if needed for more spacing */
+  background-color: #dce6d7; /* Optional: light background */
+  margin-right: 650px;
+}
+
+.navbar-item {
+  font-weight: 500;
+  color: #f7f7f7;
+  font:bold;
+  margin: 0 20px; /* Reduced margin for tighter spacing */
+}
+
+/* Center alignment for Stays and Experiences */
+.navbar-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+}
+
+.navbar-center .navbar-item {
+  padding: 0px 50px; /* Reduced padding between Stays and Experiences */
+}
+
+.clickable {
+  cursor: pointer;
+}
+
+.navbar-item:hover {
+  color: #a9ff38;
+}
+
+.navbar-right {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-icon {
+  font-size: 60px !important;
+  margin: 0 50px;
+  color: white;
+}
+
+.navbar-profile {
+  display: flex;
+  color: white;
+  align-items: center;
+  padding: 5px 10px;
+  border: 1px solid #ec1919;
+  border-radius: 20px;
+}
+
+/* Adjusted font size for profile dropdown items */
+.navbar-menu-icon {
+  font-size: 50px !important; /* Increased font size */
+  margin-right: 8px;
+}
+
+.navbar-avatar {
+  font-size: 50px; /* Increased size */
+  color: #e01b1b;
+}
+
+
+
+/* Language and currency popup */
+.language-popup {
+  color: white;
+  position: absolute;
+  right: 70px;
+  top: 60px;
+  background-color: #111311;
+  border: 2px solid #6bd32f;
+  border-radius: 8px;
+  padding: 10px;
+  box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.1);
+  z-index: 10;
+}
+
+.popup-item {
+  padding: 8px 16px;
+  font-size: 16px; /* Increased text size */
+  cursor: pointer;
+}
+
+.popup-item:hover {
+  background-color: #d67a10;
+}
+
+/* Profile dropdown menu */
+.profile-dropdown {
+  color: white;
+  position: absolute;
+  right: 20px;
+  top: 60px;
+  background-color: #181817;
+  border: 2px solid #4bb820;
+  border-radius: 8px;
+  width: 220px;
+  box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.1);
+  z-index: 10;
+}
+
+.dropdown-item {
+  padding: 12px;
+  font-size: 16px; /* Increased text size */
+  cursor: pointer;
+}
+
+.dropdown-item:hover {
+  background-color: #d47319;
+}
+
+hr {
+  border: 0.5px solid #ddd;
+  margin: 5px 0;
+}
+
+
+.navbar-item:hover {
+  color: #ff385c; /* Airbnb's primary color */
+}
+
+
+
+/* Container styling */
+.search-bar {
+  margin-top: 60px;
+  margin-left: 0px;
+  display: flex;
+  align-items: center;
+  background-color: black;
+  border-radius: 50px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  padding: 10px 20px;
+  width: full;
+  height: 70px;
+  gap: 15px;
+}
+
+/* Input styling */
+.search-bar input {
+  margin-left: 600px;
+  height: 35px;
+  border-radius: 50px;
+  box-shadow: 0 2px 5px rgb(245, 65, 0);
+  font-size: 16px;
+  color: #000000;
+  padding: 10px;
+  width: 700px; /* Adjust width as needed */
+}
+
+/* Button styling */
+.search-bar button {
+  background-color: white;
+  border: none;
+  border-radius: 50%;
+  color: #050404;
+  width: 65px;
+  height: 65px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 16px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.search-bar button:hover {
+  background-color: #e72121;
+}
+
+
+
+/* Container styling */
+.categories {
+  margin-top: 50px;
+  background-color: rgb(51, 46, 46);
+  display: flex;
+  gap: 40px;
+  padding: 10px 20px;
+  overflow-x: auto; /* Horizontal scroll if there are many categories */
+  white-space: nowrap;
+  border-radius: 10px;
+  border-bottom: 3px solid #0f5e0c;
+}
+
+/* Individual category item styling */
+.category-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: none;
+  border: none;
+  color: rgb(236, 236, 236);
+  font-size: 16px;
+  cursor: pointer;
+  outline: none;
+}
+
+.category-item .category-icon {
+  font-size: 32px; /* Increased icon size */
+  margin-bottom: 5px;
+  color: #383333;
+}
+
+.category-item .category-name {
+  font-size: 14px;
+}
+
+/* Active category styling */
+.category-item.active {
+  color: #dbd8d8; /* Darker color for active category */
+  font-weight: bold;
+}
+
+.category-item.active .category-icon {
+  color: #f7f6f6; /* Darker icon color for active category */
+}
+
+.category-item:hover {
+  color: #e66013; /* Slightly darker on hover */
+}
+
+/* Category image display styling */
+.category-image {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.category-image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(228, 218, 218, 0.911);
+}
+
+.listing-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 columns */
+  gap: 50px; /* Space between cards both horizontally and vertically */
+  padding: 20px;
+}
+
+.listing-card {
+  border: 4px solid #e6dada;
+  border-radius: 8px;
+  padding: 15px;
+  background-color: #0d1016;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(214, 69, 69, 0.1);
+  height: 600px; /* Increase height of the card container */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.listing-card img {
+  width: 100%;
+  height: 400px; /* Adjust to cover the upper part of the container */
+  object-fit: cover; /* Ensures the image fully covers the area */
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.listing-card h3 {
+  font-size: 18px;
+  color: #fcfcfc;
+  margin: 10px 0;
+}
+
+.listing-card p {
+  font-size: 14px;
+  color: #666;
+  margin: 5px 0;
+}
+
+/* Footer container styling */
+
+.footer {
+  background-color: rgb(0, 0, 0);
+  padding: 40px 20px;
+  font-size: 14px;
+  color: #f7f7f7;
+}
+
+.footer-columns {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 20px;
+}
+
+.footer-column {
+  flex: 1;
+  max-width: 200px;
+}
+
+.footer-column h4 {
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #eeeeee;
+}
+
+.footer-column ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.footer-column li {
+  margin-bottom: 8px;
+  color: #cccccc;
+  cursor: pointer;
+}
+
+.footer-column li:hover {
+  text-decoration: underline;
+}
+
+/* Bottom section styling */
+.footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 2px solid #ddd;
+  padding-top: 20px;
+  font-size: 30px;
+  color: #c4c0c0;
+  flex-wrap: wrap;
+}
+
+.footer-bottom-left {
+  flex: 1;
+  text-align: left;
+}
+
+.footer-bottom-center {
+  
+  flex: 2;
+  display: flex;
+  justify-content: center;
+  gap: 30px; /* Adds space between links */
+}
+
+.footer-bottom-center a {
+  color: #b6b6b6;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.footer-bottom-center a:hover {
+  text-decoration: underline;
+}
+
+.footer-bottom-right {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+  gap: 15px;
+  align-items: center;
+}
+
+.footer-bottom-icons span {
+  font-size: 20px;
+  cursor: pointer;
+  color: #777;
+}
+
+.footer-bottom-icons span:hover {
+  color: #53f014de;
+}
